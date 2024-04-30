@@ -8,7 +8,6 @@ const AuthLayout = ({ children }) => {
         <div className="container">
           <Suspense>{children}</Suspense>
         </div>
-
         <div>
           <div className="absolute end-0 start-0 top-1/2 -z-10 w-full -translate-y-1/3">
             <img

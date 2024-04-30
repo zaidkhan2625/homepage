@@ -1,11 +1,9 @@
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
 import MaximizeScreen from "./MaximizeScreen";
-
 import ProfileDropdown from "./ProfileDropdown";
 import NotificationDropdown from "./NotificationDropdown";
 import { logoDarkImg, logoLightImg } from "@/assets/data/images";
 import { notificationsData } from "@/assets/data";
-
 const TopbarAdmin = () => {
   return (
     <header className="sticky top-0 z-40 flex h-18 w-full border-b border-default-200 bg-white dark:bg-default-50 lg:ps-64 hide-in-print">

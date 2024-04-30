@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { BiFoodTag } from "react-icons/bi";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { LuEye } from "react-icons/lu";

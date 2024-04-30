@@ -1,19 +1,5 @@
-import { lazy } from "react";
-import {
-  LuHeart,
-  LuLogOut,
-  LuMenu,
-  LuSearch,
-  LuShoppingCart,
-  LuUser,
-  LuUserCircle,
-} from "react-icons/lu";
 import TabNavigation from "./TabNavigation";
-import VerticalMenu from "./VerticalMenu";
-
 import { logoDarkImg, logoLightImg } from "@/assets/data/images";
-import { getClientVerticalMenuItems, getHorizontalMenuItems } from "@/helpers";
-
 const Navbar = () => {
   return (
     <>

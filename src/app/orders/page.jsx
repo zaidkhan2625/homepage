@@ -1,19 +1,13 @@
 import { useState, useEffect } from "react";
-import { FaStar } from "react-icons/fa6";
 import {
-  LuBanknote,
   LuCalendar,
   LuChevronDown,
   LuEye,
-  LuWallet,
 } from "react-icons/lu";
-
 import { OrderDataTable } from "@/components";
 import { getDishById, getOrderById } from "@/helpers";
 import { toSentenceCase } from "@/utils";
 import { orderHistoryData, dishesData, orderProgressData } from "@/assets/data";
-import { currentCurrency } from "@/common";
-
 export const orderRows = orderHistoryData.map((order) => {
   return {
     ...order,
