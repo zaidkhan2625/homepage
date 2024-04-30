@@ -1,12 +1,6 @@
-import { Link } from "react-router-dom";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
-
 import { cn, toSentenceCase } from "@/utils";
 import { currentCurrency } from "@/common";
-
-const sortFilterOptions = ["Ascending", "Descending"];
-
-const statusFilterOptions = ["All", "Paid", "Cancelled", "Refunded"];
 
 const OrderDataTable = ({ rows, columns, title }) => {
   return (
@@ -14,10 +8,7 @@ const OrderDataTable = ({ rows, columns, title }) => {
       <div className="overflow-hidden p-6 ">
         <div className="flex flex-wrap items-center gap-4 sm:justify-between lg:flex-nowrap">
           <h2 className="text-xl font-semibold text-default-800">{title}</h2>
-          <div className="flex flex-wrap items-center justify-end gap-2">
-          
-           
-          </div>
+          <div className="flex flex-wrap items-center justify-end gap-2"></div>
         </div>
       </div>
       <div className="relative overflow-x-auto">
@@ -43,7 +34,7 @@ const OrderDataTable = ({ rows, columns, title }) => {
                     <tr key={idx}>
                       {columns.map((column) => {
                         const tableData = row[column.key];
-                        if (column.key == "dish_id") {
+                        if (column.key === "dish_id") {
                           return (
                             <td
                               key={tableData + idx}
@@ -108,11 +99,11 @@ const OrderDataTable = ({ rows, columns, title }) => {
                               </div>
                             </td>
                           );
-                        } else if (column.key == "status") {
+                        } else if (column.key === "status") {
                           const colorClassName =
-                            tableData == "paid"
+                            tableData === "paid"
                               ? "bg-green-500/10 text-green-500"
-                              : tableData == "refunded"
+                              : tableData === "refunded"
                               ? "bg-pink-500/10 text-pink-500"
                               : "bg-yellow-500/10 text-yellow-500";
                           return (
@@ -127,24 +118,13 @@ const OrderDataTable = ({ rows, columns, title }) => {
                               </span>
                             </td>
                           );
-                        } else if (column.key == "id") {
-                          return (
-                            <td
-                              key={tableData + idx}
-                              className="whitespace-nowrap px-6 py-4 text-sm font-medium text-default-500 hover:text-primary-500"
-                            >
-                              <Link to={`/admin/orders/${row.id.slice(1)}`}>
-                                {row.id.toUpperCase()}
-                              </Link>
-                            </td>
-                          );
                         } else {
                           return (
                             <td
                               key={tableData + idx}
                               className="whitespace-nowrap px-6 py-4 text-sm font-medium text-default-500"
                             >
-                              {column.key == "amount" && currentCurrency}
+                              {column.key === "amount" && currentCurrency}
                               {tableData}
                             </td>
                           );

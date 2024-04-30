@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuHeart } from "react-icons/lu";
 import { cn } from "@/utils";
 
@@ -20,15 +19,15 @@ const Footer = ({ hideLinks }) => {
 
           {!hideLinks && (
             <div className="flex justify-end gap-6">
-              <Link to="" className="font-medium text-default-500">
+              <a href="#" className="font-medium text-default-500">
                 Terms
-              </Link>
-              <Link to="" className="font-medium text-default-500">
+              </a>
+              <a href="#" className="font-medium text-default-500">
                 Privacy
-              </Link>
-              <Link to="" className="font-medium text-default-500">
+              </a>
+              <a href="#" className="font-medium text-default-500">
                 Cookies
-              </Link>
+              </a>
             </div>
           )}
         </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { calculatedPrice } from "@/helpers";
 import { currentCurrency } from "@/common";
 
@@ -8,8 +7,8 @@ const BestSellingProductCard = ({ product }) => {
   const discountedPrice = calculatedPrice(product);
 
   return (
-    <Link
-      to=""
+    <a
+      href="#"
       className="overflow-hidden rounded-lg border border-default-200 p-4 transition-all duration-300 hover:border-primary"
     >
       <div className="relative divide-y divide-default-200 overflow-hidden rounded-lg">
@@ -32,7 +31,7 @@ const BestSellingProductCard = ({ product }) => {
           </h6>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

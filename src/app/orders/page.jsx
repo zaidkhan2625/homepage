@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import {
   LuBanknote,
@@ -9,7 +8,7 @@ import {
   LuWallet,
 } from "react-icons/lu";
 
-import {  OrderDataTable } from "@/components";
+import { OrderDataTable } from "@/components";
 import { getDishById, getOrderById } from "@/helpers";
 import { toSentenceCase } from "@/utils";
 import { orderHistoryData, dishesData, orderProgressData } from "@/assets/data";
@@ -91,9 +90,9 @@ const OrderList = () => {
                 <h2 className="mb-0.5 text-xl font-semibold text-default-800">
                   {toSentenceCase(status)}
                 </h2>
-                <Link to="/admin/orders/9f36ca">
+                <a href="/admin/orders/9f36ca">
                   <LuEye size={18} />
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col gap-4">{orders}</div>
             </div>
@@ -108,13 +107,10 @@ const OrderList = () => {
   return (
     <div className="w-full lg:ps-64">
       <div className="page-content space-y-6 p-6">
-       
         <div className="grid gap-6 xl:grid-cols-12">
           <div className="xl:col-span-9">
             <div className="space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2 2xl:grid-cols-3">
-              
-              </div>
+              <div className="grid gap-6 sm:grid-cols-2 2xl:grid-cols-3"></div>
               <div className="grid grid-cols-1">
                 <OrderDataTable
                   title="Order History"

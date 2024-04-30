@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { LuChevronDown, LuDot, LuLayoutGrid } from "react-icons/lu";
+import { useLocation } from "react-router-dom";
 import { findAllParent, findMenuItem, getMenuItemFromURL } from "@/helpers";
 import { cn } from "@/utils";
 
@@ -93,21 +93,16 @@ const MenuItem = ({ item, className, linkClassName }) => {
 const MenuItemLink = ({ item, className }) => {
   const Icon = item.icon ?? LuDot;
   return (
-    <Link
+    <div
       className={className}
-      to={item.url ?? ""}
-      target={item.target}
       data-menu-key={item.key}
     >
       <Icon size={item.icon ? 20 : 24} />
       {item.label}
-    </Link>
+    </div>
   );
 };
 
-/**
- * Renders the application menu
- */
 const VerticalMenu = ({ menuItems }) => {
   const [activeMenuItems, setActiveMenuItems] = useState([]);
 
@@ -121,9 +116,7 @@ const VerticalMenu = ({ menuItems }) => {
       ]);
     }
   };
-  /**
-   * activate the menuitems
-   */
+
   const activeMenu = useCallback(() => {
     const trimmedURL = pathname.replaceAll("", "");
 

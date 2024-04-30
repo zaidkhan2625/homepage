@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import SimplebarReactClient from "../../SimplebarReactClient";
 import { LuLogOut, LuUserCircle2, LuZap } from "react-icons/lu";
 import {
@@ -16,7 +15,7 @@ const MenuAdmin = () => {
       className="hs-overlay fixed inset-y-0 start-0 z-[60] hidden w-64 -translate-x-full transform overflow-y-auto border-e border-default-200 bg-white transition-all duration-300 hs-overlay-open:translate-x-0 dark:bg-default-50 lg:bottom-0 lg:right-auto lg:block lg:translate-x-0 hide-in-print"
     >
       <div className="sticky top-0 flex h-18 items-center justify-center border-b border-dashed border-default-200 px-6">
-        <Link to="/home">
+        <div>
           <img
             src={logoDarkImg}
             height={40}
@@ -31,7 +30,7 @@ const MenuAdmin = () => {
             alt="logo"
             className="hidden h-10 dark:flex"
           />
-        </Link>
+        </div>
       </div>
 
       <SimplebarReactClient className="h-[calc(100%-390px)]">
@@ -57,22 +56,20 @@ const MenuAdmin = () => {
         </li>
 
         <li className="menu-item">
-          <Link
+          <div
             className="flex items-center gap-x-3.5 rounded-md px-4 py-3 text-sm text-default-700 hover:bg-default-100"
-            to="/admin/profile"
           >
             <LuUserCircle2 size={20} />
             Profile
-          </Link>
+          </div>
         </li>
         <li className="menu-item">
-          <Link
+          <div
             className="flex items-center gap-x-3.5 rounded-md px-4 py-3 text-sm text-red-500 hover:bg-red-400/10 hover:text-red-600"
-            to="/auth/logout"
           >
             <LuLogOut size={20} />
             Logout
-          </Link>
+          </div>
         </li>
       </ul>
     </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
 import MaximizeScreen from "./MaximizeScreen";
 
@@ -24,7 +23,7 @@ const TopbarAdmin = () => {
         </div>
 
         <div className="flex lg:hidden">
-          <Link to="/home">
+          <div>
             <img
               src={logoDarkImg}
               height={40}
@@ -39,7 +38,7 @@ const TopbarAdmin = () => {
               alt="logo"
               className="hidden h-10 w-full dark:flex"
             />
-          </Link>
+          </div>
         </div>
 
         <div className="hidden lg:flex">

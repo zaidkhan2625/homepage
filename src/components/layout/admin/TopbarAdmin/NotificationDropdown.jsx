@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { LuBell } from "react-icons/lu";
-
 
 const NotificationDropdown = ({ notifications }) => {
   /**
@@ -67,19 +65,14 @@ const NotificationDropdown = ({ notifications }) => {
       <div className="hs-dropdown-menu duration mt-2 hidden min-w-[20rem] rounded-lg border border-default-200 bg-white opacity-0 shadow-md transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:bg-default-50">
         <div className="flex items-center justify-between px-4 py-2">
           <h6 className="text-sm font-medium"> Notification</h6>
-          <Link to="" className="text-default-500">
+          <div className="text-default-500">
             <small>Clear All</small>
-          </Link>
+          </div>
         </div>
 
-      
-
-        <Link
-          to=""
-          className="block px-4 py-2 text-center text-sm font-medium text-primary"
-        >
+        <div className="block px-4 py-2 text-center text-sm font-medium text-primary">
           View All
-        </Link>
+        </div>
       </div>
     </div>
   );

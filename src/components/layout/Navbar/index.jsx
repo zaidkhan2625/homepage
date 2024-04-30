@@ -13,7 +13,6 @@ import VerticalMenu from "./VerticalMenu";
 
 import { logoDarkImg, logoLightImg } from "@/assets/data/images";
 import { getClientVerticalMenuItems, getHorizontalMenuItems } from "@/helpers";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,7 +25,7 @@ const Navbar = () => {
         tabIndex={-1}
       >
         <div className="flex h-16 items-center justify-center border-b border-dashed border-default-200 transition-all duration-300">
-          <Link to="/home">
+          <a href="/home">
             <img
               src={logoDarkImg}
               width={130}
@@ -41,7 +40,7 @@ const Navbar = () => {
               alt="logo"
               className="hidden h-10 dark:flex"
             />
-          </Link>
+          </a>
         </div>
      
       </div>

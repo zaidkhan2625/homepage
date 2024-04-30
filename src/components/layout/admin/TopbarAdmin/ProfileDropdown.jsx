@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { LuHome, LuLogOut, LuNewspaper, LuUser } from "react-icons/lu";
 import { cn } from "@/utils";
@@ -52,8 +51,7 @@ const ProfileDropdown = () => {
           return (
             <Fragment key={item.link + item.name}>
               {lastItem && <hr className="-mx-2 my-2 border-default-200" />}
-              <Link
-                to={item.link}
+              <div
                 className={cn(
                   "flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm text-default-800 hover:bg-default-100",
                   lastItem && "text-red-500 hover:bg-red-400/10"
@@ -61,7 +59,7 @@ const ProfileDropdown = () => {
               >
                 <Icon size={16} />
                 {item.name}
-              </Link>
+              </div>
             </Fragment>
           );
         })}

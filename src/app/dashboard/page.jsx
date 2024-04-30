@@ -1,10 +1,7 @@
-import { Link } from "react-router-dom";
-
 import { LuChevronRight } from "react-icons/lu";
 import { cn, toAlphaNumber } from "@/utils";
 import {
   BestSellingProductCard,
-  
   OrderDataTable,
 } from "@/components";
 import { orderRows } from "../orders/page";
@@ -33,7 +30,6 @@ const Dashboard = () => {
   return (
     <div className="w-full lg:ps-64">
       <div className="page-content space-y-6 p-6">
-       
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-6">
           {analyticsOverviewData.map((overview, idx) => {
             const changeColor =
@@ -66,18 +62,18 @@ const Dashboard = () => {
                 <h3 className="text-xl font-semibold text-default-950">
                   Category
                 </h3>
-                <Link
-                  to="/dishes"
+                <a
+                  href="/dishes"
                   className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-500"
                 >
                   View all <LuChevronRight size={20} />
-                </Link>
+                </a>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
                 {categoriesData.slice(0, 4).map((category) => (
-                  <Link
+                  <a
                     key={category.id}
-                    to=""
+                    href="#"
                     className="space-y-4 rounded-lg border border-default-200 py-4 text-center transition-colors duration-300 hover:border-primary"
                   >
                     <div>
@@ -92,7 +88,7 @@ const Dashboard = () => {
                     <h5 className="text-lg text-default-600">
                       {category.name}
                     </h5>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -102,12 +98,12 @@ const Dashboard = () => {
                 <h3 className="text-xl font-semibold text-default-950">
                   Best Selling Products
                 </h3>
-                <Link
-                  to="/dishes"
+                <a
+                  href="/dishes"
                   className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-500"
                 >
                   View all <LuChevronRight size={20} />
-                </Link>
+                </a>
               </div>
               <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
                 {dishesData
@@ -120,7 +116,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="pb-10 ">
+          <div className="pb-10">
             <OrderDataTable
               columns={columns}
               rows={orderRows.slice(0, 6)}
