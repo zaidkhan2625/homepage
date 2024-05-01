@@ -2,7 +2,6 @@ import { Fragment, useCallback, useEffect, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { findAllParent, findMenuItem, getMenuItemFromURL } from "@/helpers";
 import { cn } from "@/utils";
-
 const MenuItemWithChildren = ({
   item,
   linkClassName,
@@ -100,7 +99,7 @@ const MenuItemLink = ({ item, className }) => {
 const VerticalMenu = ({ menuItems }) => {
   const [activeMenuItems, setActiveMenuItems] = useState([]);
 
-  const { pathname } = useLocation();
+  const pathname  = "#";
 
   const toggleMenu = (menuItem, show) => {
     if (show) {

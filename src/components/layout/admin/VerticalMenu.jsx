@@ -1,4 +1,3 @@
-import { Link, useLocation } from "react-router-dom";
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { LuChevronDown, LuDot, LuLayoutGrid } from "react-icons/lu";
 import { findAllParent, findMenuItem, getMenuItemFromURL } from "@/helpers";
@@ -93,15 +92,15 @@ const MenuItem = ({ item, className, linkClassName }) => {
 const MenuItemLink = ({ item, className }) => {
   const Icon = item.icon ?? LuDot;
   return (
-    <Link
+    <a
       className={className}
-      to={item.url ?? ""}
+      href="#"
       target={item.target}
       data-menu-key={item.key}
     >
       <Icon size={item.icon ? 20 : 24} />
       {item.label}
-    </Link>
+    </a>
   );
 };
 
@@ -111,7 +110,7 @@ const MenuItemLink = ({ item, className }) => {
 const VerticalMenu = ({ menuItems }) => {
   const [activeMenuItems, setActiveMenuItems] = useState([]);
 
-  const { pathname } = useLocation();
+  const  pathname  = "#";
 
   const toggleMenu = (menuItem, show) => {
     if (show) {
